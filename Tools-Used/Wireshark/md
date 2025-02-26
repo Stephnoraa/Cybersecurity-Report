@@ -1,0 +1,15 @@
+# Wireshark - Network Traffic Analysis  
+Wireshark is a packet analysis tool used to capture and inspect network traffic.  
+
+## 🔹 How I Used Wireshark  
+- Captured *HTTP POST requests* during login attempts  
+- Extracted *username/password* from unencrypted traffic  
+
+## 🔹 Useful Wireshark Filters  
+- http.request.method == "POST" → Capture login credentials  
+- tcp.port == 80 → Capture HTTP traffic  
+- frame contains "password" → Find passwords in packets  
+
+## 🔹 Mitigation Strategy  
+✅ Websites should *encrypt sensitive data* with HTTPS  
+✅ Implement *secure authentication methods*  
