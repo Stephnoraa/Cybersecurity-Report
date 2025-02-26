@@ -1,0 +1,24 @@
+# Nmap - Network Scanning  
+Nmap (Network Mapper) is a powerful tool for scanning open ports, identifying running services, and fingerprinting operating systems.  
+
+## 🔹 How I Used Nmap  
+During my penetration test on testphp.vulnweb.com, I ran:  
+
+'''bash
+nmap -sV -O testphp.vulnweb.com
+
+✅ Findings:
+	•	Port 80 (HTTP) was open, running Apache/2.4.18
+	•	No other critical ports were found
+
+🔹 Useful Nmap Commands
+	•	nmap -p- testphp.vulnweb.com → Scan all ports
+	•	nmap -A testphp.vulnweb.com → Enable OS and version detection
+
+🔹 Mitigation Strategy
+
+To prevent unauthorized scanning, websites should:
+✅ Implement firewall rules to restrict access
+✅ Use Intrusion Detection Systems (IDS) to detect port scanning.
+
+
