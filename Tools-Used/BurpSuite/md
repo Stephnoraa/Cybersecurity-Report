@@ -1,0 +1,15 @@
+# Burp Suite - HTTP Interception  
+Burp Suite is a web security testing tool used for intercepting, modifying, and analyzing HTTP requests.  
+
+## 🔹 How I Used Burp Suite  
+- Configured *intercept mode* to analyze login traffic  
+- Captured *plaintext login credentials* being sent via HTTP  
+
+## 🔹 Useful Burp Suite Features  
+- *Proxy Tab:* Intercept and modify HTTP requests  
+- *Repeater Tab:* Manually send and analyze requests  
+- *Intruder Tab:* Automate brute force attacks  
+
+## 🔹 Mitigation Strategy  
+✅ Websites should *use HTTPS* to encrypt traffic  
+✅ Implement *rate limiting* to prevent brute force attacks  
